@@ -1,0 +1,100 @@
+<!--
+ 4) Dado o valor de faturamento mensal de uma distribuidora, 
+ detalhado por estado:
+
+SP – R$67.836,43
+RJ – R$36.678,66
+MG – R$29.229,88
+ES – R$27.165,48
+Outros – R$19.849,53
+
+Escreva um programa na linguagem que desejar onde calcule
+ o percentual de representação que cada estado teve dentro do 
+ valor total mensal da distribuidora.
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 Target</title>
+</head>
+<body>
+    <table>
+        <H2>Tabela de faturamento da distribuidora Target</H1>
+        <tr>
+            <th>SP</th>
+            <td><input id="fatSP" type="text"></td>
+            <td><input id="porcSP" type="text"></td>
+        </tr>
+        <tr>
+            <th>RJ</th>
+            <td><input id="fatRJ" type="text"></td>
+            <td><input id="porcRJ" type="text"></td>
+        </tr>
+        <tr>
+            <th>MG</th>
+            <td><input id="fatMG" type="text"></td>
+            <td><input id="porcMG" type="text"></td>
+        </tr>
+        <tr>
+            <th>ES</th>
+            <td><input id="fatES" type="text" name="" id=""></td>
+            <td><input id="porcES" type="text"></td>
+        </tr>
+        <tr>
+            <th>Outros</th>
+            <td><input id="fatOutros" type="text"></td>
+            <td><input id="porcOutros" type="text"></td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td><input id="fatTotal" type="text"></td>
+            <td><input id="porcTotal" type="text"></td>
+        </tr>
+    </table>
+    <script>
+        let sp = 67836.43;
+        let rj = 36678.66;
+        let mg = 29229.88;
+        let es = 27165.48;
+        let outros = 19849.53;
+        let total = sp+rj+mg+es+outros;
+        let spPorcentagem = (sp*100)/total;
+        let rjPorcentagem = (rj*100)/total;
+        let mgPorcentagem = (mg*100)/total;
+        let esPorcentagem = (es*100)/total;
+        let outrosPorcentagem = (outros*100)/total;
+        let totalPorcentagem = (total*100)/total;
+
+        let fatSP =  document.getElementById('fatSP');
+        fatSP.value = "R$"+sp; 
+        let fatRJ =  document.getElementById('fatRJ');
+        fatRJ.value = "R$"+rj;
+        let fatMG =  document.getElementById('fatMG');
+        fatMG.value = "R$"+mg;
+        let fatES =  document.getElementById('fatES');
+        fatES.value = "R$"+es;
+        let fatOutros =  document.getElementById('fatOutros');
+        fatOutros.value = "R$"+outros;
+        let fatTotal =  document.getElementById('fatTotal');
+        fatTotal.value = "R$"+total;
+
+        let porcSP =  document.getElementById('porcSP');
+        porcSP.value = spPorcentagem.toFixed(2)+"%";  
+        let porcRJ =  document.getElementById('porcRJ');
+        porcRJ.value = rjPorcentagem.toFixed(2)+"%"; 
+        let porcMG =  document.getElementById('porcMG');
+        porcMG.value = mgPorcentagem.toFixed(2)+"%"; 
+        let porcES =  document.getElementById('porcES');
+        porcES.value = esPorcentagem.toFixed(2)+"%"; 
+        let porcOutros =  document.getElementById('porcOutros');
+        porcOutros.value = outrosPorcentagem.toFixed(2)+"%"; 
+        let porcTotal =  document.getElementById('porcTotal');
+        porcTotal.value = totalPorcentagem.toFixed(2)+"%"; 
+
+    </script>
+</body>
+</html>
